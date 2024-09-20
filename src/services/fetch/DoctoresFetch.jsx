@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 
-const API_URL = "http://localhost:8081/personas"
-const PersonasFetch = () => {
+const API_URL = "http://localhost:8081/doctores"
+const DoctoresFetch = () => {
     const [data, setData] = useState([])
 
     useEffect(() => {
@@ -22,9 +22,8 @@ const PersonasFetch = () => {
                     <div className="col-6">
                         <div className="mt-5 p-4 bg-light rounded-5 shadow">
                         <h4>Nombre: {item.nombre}</h4>
-                        {item.apellido &&(
-                            <h4>Apellido: {item.apellido}</h4>
-                        )}
+                        <h4>Nombre: {item.apellido}</h4>
+                        <h4>Nombre: {item.profesion}</h4>
                         </div>
                     </div>
                 ))}
@@ -33,4 +32,4 @@ const PersonasFetch = () => {
     )
 }
 
-export default PersonasFetch
+export default DoctoresFetch
